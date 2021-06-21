@@ -1,6 +1,7 @@
 import numpy as np
 
-class LogisticRegression():
+
+class LogisticRegression:
     def __init__(self, learning_rate, n_iters):
         self.learning_rate = learning_rate
         self.n_iters = n_iters
@@ -17,11 +18,11 @@ class LogisticRegression():
         for _ in range(self.n_iters):
             log_model = 1 / (1 + np.exp(-(np.dot(features, self.weights) + self.bias)))
 
-            # derivate of weights and bias 
-            dw = (1 / n_samples) * np.dot(features.T, (log_model-target))
-            db = (1 / n_samples) * np.sum(log_model-target)
+            # derivate of weights and bias
+            dw = (1 / n_samples) * np.dot(features.T, (log_model - target))
+            db = (1 / n_samples) * np.sum(log_model - target)
 
-            # updates weights 
+            # updates weights
             self.weights -= self.learning_rate * dw
             self.bias -= self.bias * db
 
