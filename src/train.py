@@ -1,10 +1,11 @@
 import pandas as pd
 import config
 from model import LogisticRegression
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import log_loss
 import argparse
 import joblib
 import os
+import numpy as np
 
 
 def run(fold):
@@ -22,11 +23,10 @@ def run(fold):
     model = LogisticRegression(0.0001, 100)
     model.fit(x_train, y_train)
     pred = model.predict(x_test)
-    acc = accuracy_score(y_test, pred)
-    print(f'Accuracy for Logistic Regression: {acc:0.3f} and Fold={fold}')
-    # save the model 
-    joblib.dump(model, os.path.join(config.MODEL_PATH, f'LR_fold{fold}.bin'))
-
+    acc = log_loss(y_test, pred)
+    print(f"Log Loss for Logistic Regression: {acc:0.3f} for Fold={fold}")
+    # save the model
+    joblib.dump(model, os.path.join(config.MODEL_PATH, f"LR_fold{fold}.bin"))
 
 
 if __name__ == "__main__":
