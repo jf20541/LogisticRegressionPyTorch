@@ -44,21 +44,25 @@ pip install --upgrade pip && pip install -r requirements.txt && sh run.sh
 ## Data Features and Target
 [Kaggle's Weather Data](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)\
 Target
-- `RainTomorrow`:
-
+```bash
+RainTomorrow    float64
+```
 Features
-- `MinTemp`: 
-- `MaxTemp`: 
-- `Rainfall`: 
-- `Humidity9am`: 
-- `Humidity3pm`: 
-- `Pressure9am`: 
-- `Pressure3pm`: 
-- `Temp9am`: 
-- `Temp3pm`: 
-- `RainToday`: 
-- `Year`: 
-- `Month`: 
+```bash
+MinTemp         float64
+MaxTemp         float64
+Rainfall        float64
+Humidity9am     float64
+Humidity3pm     float64
+Pressure9am     float64
+Pressure3pm     float64
+Temp9am         float64
+Temp3pm         float64
+RainToday       float64
+RainTomorrow    float64
+Year              int64
+Month             int64
+```
 
 ## Sources
 https://www.kaggle.com/jsphyg/weather-dataset-rattle-package \
