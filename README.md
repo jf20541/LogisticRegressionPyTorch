@@ -59,7 +59,6 @@ Pressure3pm     float64
 Temp9am         float64
 Temp3pm         float64
 RainToday       float64
-RainTomorrow    float64
 Year              int64
 Month             int64
 ```
