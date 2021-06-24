@@ -36,7 +36,7 @@ Created 5 modules
 - `data.py`: Cleaned the data and added more varaibles
 
 ### Run
-In a terminal or command window, navigate to the top-level project directory `MonteCarloPorfolioOptimization/` (that contains this README) and run the following command:
+In a terminal or command window, navigate to the top-level project directory `LogisticRegression/` (that contains this README) and run the following command:
 ```bash
 pip install --upgrade pip && pip install -r requirements.txt && sh run.sh
 ``` 
