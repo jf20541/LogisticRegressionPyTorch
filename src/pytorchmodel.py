@@ -11,14 +11,12 @@ df = pd.read_csv(config.CLEAN_FILE)
 features = df.drop("RainTomorrow", axis=1).values
 targets = df.RainTomorrow.values
 
+# convert to tensors
+features = torch.from_numpy(features.astype(np.float32))
+targets = torch.from_numpy(targets.astype(np.float32))
+
 # split the data 80% training and 20% testing
 x_train, x_test, y_train, y_test = train_test_split(features, targets, test_size=0.2)
-
-# convert to tensors
-x_train = torch.from_numpy(x_train.astype(np.float32))
-y_train = torch.from_numpy(y_train.astype(np.float32))
-x_test = torch.from_numpy(x_test.astype(np.float32))
-y_test = torch.from_numpy(y_test.astype(np.float32))
 
 # reshape the tensors
 y_test = y_test.view(y_test.shape[0], 1)
