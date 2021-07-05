@@ -1,7 +1,7 @@
 # LogisticRegression
 
 ## Objective
-Logistic regression is a classification algorithm used to assign observations to a discrete set of classes. Estimates the relationship between one dependent binary variable (RainTomorrow) and independent variables (MinTemp,MaxTemp,Rainfall,Humidity9am,Humidity3pm,Pressure9am,Pressure3pm,Temp9am,Temp3pm,RainToday,Year,Month).
+Logistic regression is an algorithm used to assign observations to a discrete set of classes. Estimates the relationship between one dependent binary variable (RainTomorrow) and independent variables (MinTemp,MaxTemp,Rainfall,Humidity9am,Humidity3pm,Pressure9am,Pressure3pm,Temp9am,Temp3pm,RainToday,Year,Month).
 
 ## Model
 ![](https://latex.codecogs.com/gif.latex?sigmoid%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20e%5E%7B-y_%7Bi%7D%7D%7D)\
@@ -17,6 +17,11 @@ Logistic regression is a classification algorithm used to assign observations to
 
 ## Output
 ```bash
+Epoch 500 and  Loss: 15.6091
+Logistic Regression using Pytorch Accuracy: 78.15%
+```
+
+```bash
 sh run.sh 
 ```
 ```bash
@@ -29,6 +34,7 @@ Log Loss for Logistic Regression: 0.781 for Fold=4
 
 ### Code
 Created 5 modules
+- `pytorchmodels.py`: create a Logistic Regression using PyTorch and outputs its metric
 - `models.py`: create a Logistic Regression from scratch
 - `train.py`: Initiated the model, evaluated the models metric and initializing Argument Parser Class
 - `create_folds.py`: Implemented a cross-validation set
