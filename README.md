@@ -34,6 +34,7 @@ Log Loss for Logistic Regression: 0.781 for Fold=4
 
 ### Code
 Created 5 modules
+- `pytorchmodels.py`: create a Logistic Regression using PyTorch and outputs its metric
 - `models.py`: create a Logistic Regression from scratch
 - `train.py`: Initiated the model, evaluated the models metric and initializing Argument Parser Class
 - `create_folds.py`: Implemented a cross-validation set
