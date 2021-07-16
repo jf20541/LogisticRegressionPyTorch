@@ -20,9 +20,6 @@ Logistic regression is an algorithm used to assign observations to a discrete se
 Epoch 500 and  Loss: 15.6091
 Logistic Regression using Pytorch Accuracy: 78.15%
 ```
-
-```bash
-sh run.sh 
 ```
 ```bash
 Log Loss for Logistic Regression: 0.779 for Fold=0
@@ -34,12 +31,12 @@ Log Loss for Logistic Regression: 0.781 for Fold=4
 
 ### Code
 Created 5 modules
-- `pytorchmodels.py`: create a Logistic Regression using PyTorch and outputs its metric
-- `models.py`: create a Logistic Regression from scratch
-- `train.py`: Initiated the model, evaluated the models metric and initializing Argument Parser Class
+- `pytorchmodels.py`: Logistic Regression using PyTorch and evaluate metric
+- `models.py`: Logistic Regression from scratch
+- `train.py`: Initiated the model, evaluate metric and initializing Argument Parser Class
 - `create_folds.py`: Implemented a cross-validation set
 - `config.py`: Define path as global variables
-- `data.py`: Cleaned the data and added more varaibles
+- `data.py`: Cleaned the data and feature engineer
 
 ### Run
 In a terminal or command window, navigate to the top-level project directory `LogisticRegression/` (that contains this README) and run the following command:
@@ -48,13 +45,12 @@ pip install --upgrade pip && pip install -r requirements.txt && sh run.sh
 ``` 
 
 ## Data Features and Target
-[Kaggle's Weather Data](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)\
+[Kaggle's Weather Data](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)
+```bash
 Target
-```bash
 RainTomorrow    float64
-```
+
 Features
-```bash
 MinTemp         float64
 MaxTemp         float64
 Rainfall        float64
