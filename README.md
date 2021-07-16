@@ -1,7 +1,7 @@
 # LogisticRegression
 
 ## Objective
-Logistic regression is an algorithm used to assign observations to a discrete set of classes. Estimates the relationship between one dependent binary variable (RainTomorrow) and independent variables (MinTemp,MaxTemp,Rainfall,Humidity9am,Humidity3pm,Pressure9am,Pressure3pm,Temp9am,Temp3pm,RainToday,Year,Month).
+Logistic Regression using Pytorch and from scratch to determine the impact of multiple independent variables presented simultaneously to predict binary target values [1: RainTomorrow, 0:No RainTomorrow]
 
 ## Model
 ![](https://latex.codecogs.com/gif.latex?sigmoid%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20e%5E%7B-y_%7Bi%7D%7D%7D)\
