@@ -17,12 +17,12 @@ Logistic Regression using Pytorch and from scratch to determine the impact of mu
 
 
 ## Output
-```bash
+```
 Epoch 500 and  Loss: 15.6091
 Logistic Regression using Pytorch Accuracy: 78.15%
 ```
 ```
-```bash
+```
 Log Loss for Logistic Regression: 0.779 for Fold=0
 Log Loss for Logistic Regression: 0.779 for Fold=1
 Log Loss for Logistic Regression: 0.777 for Fold=2
