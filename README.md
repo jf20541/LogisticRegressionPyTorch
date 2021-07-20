@@ -4,23 +4,30 @@
 Logistic Regression using Pytorch and from scratch to determine the impact of multiple independent variables presented simultaneously to predict binary target values [1: RainTomorrow, 0:No RainTomorrow]
 
 ## Model
-![](https://latex.codecogs.com/gif.latex?sigmoid%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20e%5E%7B-y_%7Bi%7D%7D%7D)\
-![](https://latex.codecogs.com/gif.latex?y_%7Bi%7D%20%3D%20%5Cbeta%20_%7B0%7D%20&plus;%20%5Cbeta%20_%7B1%7DX_%7B1%2Ci%7D&plus;%20...%20&plus;%20%5Cbeta_%7Bk%7DX_%7Bk%2Ci%7D%2C%20i%3D1%2C....%2C%20n)\
-![](https://latex.codecogs.com/gif.latex?Logistic%20Regression%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20e%5E%7B-%28%5Cbeta%20_%7B0%7D%20&plus;%20%5Cbeta%20_%7B1%7DX_%7B1%2Ci%7D&plus;%20...%20&plus;%20%5Cbeta_%7Bk%7DX_%7Bk%2Ci%7D%29%7D%7D)
+Supervised-Learning method for binary classification. It uses a sigmoid function **(σ)** to model a curve where the predictor domain features can be conditional probability between [0,1]. Logistic refers to the log-odds probability model, which is the ratio of the probability that an event occurs to the probability that it doesn't occur, given in the equation below.
+
+
+![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B200%7D%20%5Cfn_phv%20%5Cbeta%20X%20%3D%20log%5Cleft%20%28%5Cfrac%7Bp%28x%29%7D%7B1-p%28x%29%7D%20%5Cright%20%29)\
+![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B200%7D%20%5Cfn_phv%20%5Csigma%20%3D%20p%28X%29%20%3D%20%5Cfrac%7B1%7D%7B1%20&plus;%20e%5E%7B%5E%7B-%5Cbeta%20X%7D%7D%7D)\
 
 
 ## Metric & Mathematics
+It uses the **Maximum Likelihood Estimation (MLE)** to find the optimal parameters. For labels [0, 1] it estimates parameters such that the product of all conditional probabilities of class [0,1] samples are as close to maximum value [0,1].
 
-![](https://latex.codecogs.com/gif.latex?Decision%20Boundary%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%201%20%5C%3Bif%5C%3B%20P%28y%3D1%7Cx%29%3E0.5%5C%5C0%5C%3B%20%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3B%5C%3Botherwise%20%5Cend%7Bmatrix%7D%5Cright.)
-- `Cross Entropy (Log Loss)`:\
-![](https://latex.codecogs.com/gif.latex?LogLoss%3D%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%5By%5E%7Bi%7Dlog%28h_%7B0%7D%28x%5E%7Bi%7D%29%29%20&plus;%20%281-y%5E%7Bi%7D%29log%281-h_%7B0%7D%28x%5E%7Bi%7D%29%29%5D)
+![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B200%7D%20%5Cfn_phv%20L%28%5Cbeta%20%29%20%3D%20%5Cprod_%7Bs%5C%2C%20in%20%5C%2C%20y_%7Bi%7D%3D1%7D%5E%7B%7D%20p%28x_%7Bi%7D%29%20*%20%5Cprod_%7Bs%5C%2C%20in%20%5C%2C%20y_%7Bi%7D%3D0%7D%5E%7B%7D%20%281-p%28x_%7Bi%7D%29%29)
 
+Combine the products, take the log-likelihood, and convert into summation
+![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B200%7D%20%5Cfn_phv%20l%28%5Cbeta%20%29%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20y_%7Bi%7D%5C%2C%20log%28p%28x_%7Bi%7D%29%29%20&plus;%20%281-y_%7Bi%7D%29log%281-p%28x_%7Bi%7D%29%29)
+
+
+Substitute p(x_1) with it's exponent form, group the coefficients of y_i and simplify to optimize beta coefficient that maximizes this function. 
+
+![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B200%7D%20%5Cfn_phv%20l%28%5Cbeta%20%29%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20y_%7Bi%7D%5Cbeta%20x_%7Bi%7D%20-%20log%281%20&plus;%20e%5E%7B%5Cbeta%20x_%7Bi%7D%7D%29)
 
 ## Output
 ```
 Epoch 500 and  Loss: 15.6091
 Logistic Regression using Pytorch Accuracy: 78.15%
-```
 ```
 ```
 Log Loss for Logistic Regression: 0.779 for Fold=0
