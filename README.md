@@ -3,6 +3,28 @@
 ## Objective
 Logistic Regression using Pytorch and from scratch to determine the impact of multiple independent variables presented simultaneously to predict binary target values [1: RainTomorrow, 0:No RainTomorrow]
 
+## Repository File Structure
+    ├── src          
+    │   ├── pytorchmodel.py      # Logistic Regression using PyTorch and evaluate metric
+    │   ├── models.py            # Logistic Regression from scratch
+    │   ├── train.py             # Initiated the model, evaluate metric and initializing Argument Parser Class
+    │   ├── create_folds.py      # Implemented a cross-validation set
+    │   ├── data.py              # Cleaned the data and feature engineer
+    │   └── config.py            # Define path as global variable
+    ├── inputs
+    │   ├── train.csv            # Training dataset
+    │   └── train_folds.csv      # K-Fold dataset LR_fold0.bin
+    ├── models                   # Saving/Loading models parameters
+    │   ├── LR_fold0.bin
+    │   ├── LR_fold1.bin
+    │   ├── LR_fold2.bin 
+    │   ├── LR_fold3.bin 
+    │   └── LR_fold4.bin
+    ├── requierments.txt         # Packages used for project
+    └── README.md
+    
+
+
 ## Model
 Supervised-Learning method for binary classification. It uses a sigmoid function **(σ)** to model a curve where the predictor domain features can be conditional probability between [0,1]. Logistic refers to the log-odds probability model, which is the ratio of the probability that an event occurs to the probability that it doesn't occur, given in the equation below.
 
@@ -36,15 +58,6 @@ Log Loss for Logistic Regression: 0.777 for Fold=2
 Log Loss for Logistic Regression: 0.779 for Fold=3
 Log Loss for Logistic Regression: 0.781 for Fold=4
 ```
-
-### Code
-- `pytorchmodels.py`: Logistic Regression using PyTorch and evaluate metric
-- `models.py`: Logistic Regression from scratch
-- `train.py`: Initiated the model, evaluate metric and initializing Argument Parser Class
-- `create_folds.py`: Implemented a cross-validation set
-- `config.py`: Define path as global variables
-- `data.py`: Cleaned the data and feature engineer
-
 ## Data Features and Target
 [Kaggle's Weather Data](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)
 ```bash
