@@ -17,10 +17,15 @@ Logistic Regression Accuracy: 77.69% for Fold=2
 Logistic Regression Accuracy: 77.94% for Fold=3
 Logistic Regression Accuracy: 78.06% for Fold=4
 ```
+**Optimal Model for Dataset**
+```
+Logistic Regression using Pytorch Accuracy: 78.15%
+```
 
 ## Repository File Structure
     ├── src          
     │   ├── pytorchmodel.py      # Logistic Regression using PyTorch and evaluate metric
+    │   ├── optimal_model.py     # Optimal model compared Logistic-Reg, SVM, and Decision Tree
     │   ├── models.py            # Logistic Regression from scratch
     │   ├── train.py             # Initiated the model, evaluate metric and initializing Argument Parser Class
     │   ├── create_folds.py      # Implemented a cross-validation set
