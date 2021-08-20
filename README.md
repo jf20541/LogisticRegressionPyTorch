@@ -1,7 +1,7 @@
 # LogisticRegression
 
 ## Objective
-Logistic Regression using Pytorch and from scratch to determine the impact of multiple independent variables presented simultaneously to predict binary target values [1: RainTomorrow, 0:No RainTomorrow]. Tested multiple ML models (Support Vector Machines, Decision Trees, and Logistic Regression) while optimizing each model's hyper-parameters since the original model output a low accuracy score.
+Logistic Regression using Pytorch and from scratch to determine the impact of multiple independent variables presented simultaneously to predict binary target values [1: RainTomorrow, 0:No RainTomorrow]. Tested multiple ML models (Support Vector Machines, Decision Trees, and Logistic Regression) while optimizing each model's hyper-parameters since the original model performed poorly (78.15%)
 
 
 ## Output
