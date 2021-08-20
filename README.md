@@ -5,9 +5,11 @@ Logistic Regression using Pytorch and from scratch to determine the impact of mu
 
 
 ## Output
+**Logistic Regression using PyTorch**
 ```
 Logistic Regression using Pytorch Accuracy: 78.15%
 ```
+**Logistic Regression from scratch**
 ```
 Logistic Regression Accuracy: 77.85% for Fold=0
 Logistic Regression Accuracy: 77.90% for Fold=1
