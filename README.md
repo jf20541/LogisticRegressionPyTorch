@@ -36,6 +36,7 @@ Logistic Regression Accuracy: 78.06% for Fold=4
     │   ├── LR_fold3.bin 
     │   └── LR_fold4.bin
     ├── requierments.txt         # Packages used for project
+    ├── sources.txt              # Sources
     └── README.md
     
 
@@ -81,8 +82,3 @@ RainToday       float64
 Year              int64
 Month             int64
 ```
-
-## Sources
-https://www.kaggle.com/jsphyg/weather-dataset-rattle-package \
-http://www.bom.gov.au/climate/data. \
-https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html
