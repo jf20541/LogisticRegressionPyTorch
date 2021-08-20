@@ -48,15 +48,14 @@ Substitute p(x_1) with it's exponent form, group the coefficients of y_i and sim
 
 ## Output
 ```
-Epoch 500 and  Loss: 15.6091
 Logistic Regression using Pytorch Accuracy: 78.15%
 ```
 ```
-Log Loss for Logistic Regression: 0.779 for Fold=0
-Log Loss for Logistic Regression: 0.779 for Fold=1
-Log Loss for Logistic Regression: 0.777 for Fold=2
-Log Loss for Logistic Regression: 0.779 for Fold=3
-Log Loss for Logistic Regression: 0.781 for Fold=4
+Logistic Regression Accuracy: 77.85% for Fold=0
+Logistic Regression Accuracy: 77.90% for Fold=1
+Logistic Regression Accuracy: 77.69% for Fold=2
+Logistic Regression Accuracy: 77.94% for Fold=3
+Logistic Regression Accuracy: 78.06% for Fold=4
 ```
 ## Data Features and Target
 [Kaggle's Weather Data](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)
