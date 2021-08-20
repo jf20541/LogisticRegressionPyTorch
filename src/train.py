@@ -1,11 +1,10 @@
 import pandas as pd
-import config
 from model import LogisticRegression
-from sklearn.metrics import log_loss
+from sklearn.metrics import accuracy_score, roc_auc_score
 import argparse
 import joblib
 import os
-import numpy as np
+import config
 
 
 def run(fold):
@@ -20,11 +19,11 @@ def run(fold):
     y_test = df_test.RainTomorrow.values
 
     # initiate the Logistic Regression model
-    model = LogisticRegression(0.0001, 100)
+    model = LogisticRegression(0.0001, 200)
     model.fit(x_train, y_train)
     pred = model.predict(x_test)
-    acc = log_loss(y_test, pred)
-    print(f"Log Loss for Logistic Regression: {acc:0.3f} for Fold={fold}")
+    acc = accuracy_score(y_test, pred) * 100
+    print(f"Logistic Regression Accuracy: {acc:0.2f}% for Fold={fold}")
     # save the model
     joblib.dump(model, os.path.join(config.MODEL_PATH, f"LR_fold{fold}.bin"))
 

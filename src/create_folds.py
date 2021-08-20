@@ -13,5 +13,4 @@ if __name__ == "__main__":
     kf = model_selection.KFold(n_splits=5)
     for fold, (trn_, val_) in enumerate(kf.split(X=df)):
         df.loc[val_, "kfold"] = fold
-    # save the new csv with kofld column
     df.to_csv(config.TRAIN_FOLDS, index=False)
