@@ -3,6 +3,19 @@
 ## Objective
 Logistic Regression using Pytorch and from scratch to determine the impact of multiple independent variables presented simultaneously to predict binary target values [1: RainTomorrow, 0:No RainTomorrow]
 
+
+## Output
+```
+Logistic Regression using Pytorch Accuracy: 78.15%
+```
+```
+Logistic Regression Accuracy: 77.85% for Fold=0
+Logistic Regression Accuracy: 77.90% for Fold=1
+Logistic Regression Accuracy: 77.69% for Fold=2
+Logistic Regression Accuracy: 77.94% for Fold=3
+Logistic Regression Accuracy: 78.06% for Fold=4
+```
+
 ## Repository File Structure
     ├── src          
     │   ├── pytorchmodel.py      # Logistic Regression using PyTorch and evaluate metric
@@ -46,17 +59,6 @@ Substitute p(x_1) with it's exponent form, group the coefficients of y_i and sim
 
 ![](https://latex.codecogs.com/gif.latex?%5Cdpi%7B200%7D%20%5Cfn_phv%20l%28%5Cbeta%20%29%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20y_%7Bi%7D%5Cbeta%20x_%7Bi%7D%20-%20log%281%20&plus;%20e%5E%7B%5Cbeta%20x_%7Bi%7D%7D%29)
 
-## Output
-```
-Logistic Regression using Pytorch Accuracy: 78.15%
-```
-```
-Logistic Regression Accuracy: 77.85% for Fold=0
-Logistic Regression Accuracy: 77.90% for Fold=1
-Logistic Regression Accuracy: 77.69% for Fold=2
-Logistic Regression Accuracy: 77.94% for Fold=3
-Logistic Regression Accuracy: 78.06% for Fold=4
-```
 ## Data Features and Target
 [Kaggle's Weather Data](https://www.kaggle.com/jsphyg/weather-dataset-rattle-package)
 ```bash
