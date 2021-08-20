@@ -19,7 +19,11 @@ Logistic Regression Accuracy: 78.06% for Fold=4
 ```
 **Optimal Model for Dataset**
 ```
-Logistic Regression using Pytorch Accuracy: 78.15%
+Optimal Model: Logistic Regression 
+
+Trial 2 finished with value: 0.8699691010331842 (86.99%)
+Parameters: 'penalty': l2, 'logistic-regularization': 9.377701438670483
+
 ```
 
 ## Repository File Structure
