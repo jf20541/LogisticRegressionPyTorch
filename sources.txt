@@ -1,3 +1,4 @@
 https://www.kaggle.com/jsphyg/weather-dataset-rattle-package
 http://www.bom.gov.au/climate/data.
 https://ml-cheatsheet.readthedocs.io/en/latest/logistic_regression.html
+https://optuna.readthedocs.io/en/v1.0.0/tutorial/pruning.html
