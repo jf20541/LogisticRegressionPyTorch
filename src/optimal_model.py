@@ -14,10 +14,17 @@ features = df.drop("RainTomorrow", axis=1).values
 targets = df.RainTomorrow.values
 
 # split the data 75% training and 25% testing
-x_train, x_test, y_train, y_test = train_test_split(features, targets, test_size=0.25)
+x_train, x_test, y_train, y_test = train_test_split(features, targets, test_size=0.25, shuffle=False)
 
 
 def create_model(trial):
+    """ Find the optimal ML Model (Decision Tree, SVM, Log-Reg) with optimal hyperparameters
+    Args:
+        trial: instance represents a process of evaluating an objective function
+    Raises:
+        optuna.TrialPruned: automatically stops unpromising trials at the early stages of the training (
+    Returns: return optimal model with optimal hyperparameters
+    """
     model_type = trial.suggest_categorical(
         "model_type", ["logistic-regression", "decision-tree", "svm"]
     )
