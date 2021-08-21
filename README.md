@@ -5,21 +5,21 @@ Logistic Regression using Pytorch and from scratch to determine the impact of mu
 
 
 ## Output
+
+**Optimal Model for Dataset**
+```
+Optimal Model: Logistic Regression 
+
+Trial 2 finished with value: 86.99%
+Parameters: 'penalty': l2, 'logistic-regularization': 9.377701438670483
+```
 **Logistic Regression using PyTorch**
 ```
 Logistic Regression using Pytorch Accuracy: 78.15%
 ```
 **Logistic Regression from scratch**
 ```
-Logistic Regression Accuracy: 77.85% for Fold=0
-Logistic Regression Accuracy: 77.90% for Fold=1
-Logistic Regression Accuracy: 77.69% for Fold=2
-Logistic Regression Accuracy: 77.94% for Fold=3
-Logistic Regression Accuracy: 78.06% for Fold=4
-```
-**Optimal Model for Dataset**
-```
-Logistic Regression using Pytorch Accuracy: 78.15%
+Mean Logistic Regression Accuracy: 77.89%
 ```
 
 ## Repository File Structure
