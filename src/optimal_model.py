@@ -10,8 +10,8 @@ import config
 
 # import dataset and define target/feature values
 df = pd.read_csv(config.CLEAN_FILE)
-features = df.drop("RainTomorrow", axis=1).values
 targets = df.RainTomorrow.values
+features = df.drop("RainTomorrow", axis=1).values
 
 # split the data 75% training and 25% testing
 x_train, x_test, y_train, y_test = train_test_split(features, targets, test_size=0.25, shuffle=False)
